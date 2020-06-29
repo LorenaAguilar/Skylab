@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <button class="botao">Adicionar quadrado vermelho</button>
+    <div id="box"></div>
+
+    <script>
+      //Primeiro encontra o botão
+      var buttonElement = document.querySelector("button.botao");
+      //Encontra a div que vai receber nossa caixa vermelha
+      var boxElement = document.querySelector("div#box");
+
+      //Ao clicar no botão, ele vai criar um novo elemento da div
+      buttonElement.onclick = function () {
+        var redBox = document.createElement("div");
+        redBox.style.width = 100;
+        redBox.style.height = 100;
+        redBox.style.backgroundColor = "#f00";
+
+        boxElement.appendChild(redBox);
+      };
+    </script>
+  </body>
+</html>
