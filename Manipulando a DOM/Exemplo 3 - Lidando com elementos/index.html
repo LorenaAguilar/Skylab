@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <div id="app">
+      <input id="nome" />
+    </div>
+
+    <script>
+      //É possível, além de referenciar elementos dentro do script, também criá-los
+
+      var linkElement = document.createElement("a"); //Aqui estamos criando um link
+
+      linkElement.setAttribute("href", "https://www.google.com.br/");
+      //href => tag HTML que indica um endereço para o qual remete um link
+
+      var textElement = document.createTextNode("Acessar google");
+
+      //Precisamos posicionar o texto junto do link
+
+      linkElement.appendChild(textElement);
+
+      //Agora queremos pegar esse link criado e jogar para dentro do corpo HTML
+
+      var containerElement = document.querySelector("#app");
+      containerElement.appendChild(linkElement); //Aqui estamos 'jogando' o linkElement dentro do corpo html
+
+      //Se nós quisermos adicionar outros componentes podemos utilizar o setAttribute
+
+      var inputElement = document.querySelector("#nome");
+      //Removendo um elemento da dom
+      containerElement.removeChild(inputElement);
+    </script>
+  </body>
+</html>
