@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <script>
+      function soma(numero1, numero2) {
+        //corpo da função e o que ela vai executar quando for chamada
+
+        var resultado = numero1 + numero2;
+
+        return resultado;
+      }
+
+      var resultado = soma(1, 2);
+      console.log(resultado);
+
+      //Importante ressaltar que a variável resultado pode ser criada duas vezes com o mesmo nome porque
+      //quando uma variável é declarada com var ela só é visível dentro do escopo dela, logo, a variável
+      //resultado dentro da função soma só é visível (só existe) dentro da função soma.
+
+      //Outra coisa importante é que assim como as variáveis, eu não preciso definir o tipo de parâmetro
+      //que a função vai receber, e também não preciso informar qual é o tipo de retorno da função
+    </script>
+  </body>
+</html>

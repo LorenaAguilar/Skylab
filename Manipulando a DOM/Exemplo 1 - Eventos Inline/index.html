@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <!-- DOM => Árvore de elementos dentro do nosso html que são dispostos em tela 
+    ex: um botão, uma informação passada -->
+
+    <!-- onclick => Quando a pessoa clicar no botão em tela, ele vai chamar a função "mostraAlerta()" -->
+    <div id="app">
+      <button onclick="mostraAlertaOnClick()">Me pressione</button>
+      <button onmouseover="mostraAlertaOnmouseOver()">Passe o mouse</button>
+      <input onkeypress="mostraAlertaOnKeyPress()" />
+    </div>
+
+    <script>
+      //Os eventos que estamos aplicando aqui ao botão, podem ser aplicados a qualquer elemento da dom
+      //alert() => função global do javascript para mostrar um alerta em tela
+
+      //Função que irá mostrar um alerta quando clicar no botão
+      function mostraAlertaOnClick() {
+        alert("Botão foi clicado!");
+      }
+      //Função que irá mostrar um alerta quando o mouse passar sobre o botão
+      function mostraAlertaOnmouseOver() {
+        alert("O mouse passou sobre o botão!");
+      }
+
+      //Função que irá mostrar um alerta quando inserir uma tecla na caixa de entrada
+      function mostraAlertaOnKeyPress() {
+        alert("Uma tecla foi inserida!");
+      }
+    </script>
+  </body>
+</html>

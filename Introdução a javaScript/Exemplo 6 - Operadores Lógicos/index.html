@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //AND, OR, NOT
+
+      var sexo = "M",
+        idade = 23;
+
+      //AND
+      //Verificando se o sexo é masculino e a idade maior que 18
+      if (sexo === "M" && idade >= 18) {
+        console.log("Sexo masculino e idade maior que 18!");
+      }
+
+      //OR
+      //Verificando se o sexo é masculino ou a idade menor que 18
+      if (sexo === "M" || idade <= 18) {
+        console.log("Sexo masculino ou idade menor que 18!");
+      }
+
+      //NOT
+      //Verificando se o sexo não é masculino
+      if (sexo !== "M") {
+        console.log("Sexo diferente de masculino!");
+      }
+      //Ao fazer a negação, caso a gente queira verificar só os valores dos dados utilizamos "!=",
+      //já caso a gente queira verificar os valores e tipos dos dados, utilizamos "!=="
+
+      //Armazenando o valor da negação em uma variável:
+
+      var masculino;
+
+      if (sexo === "M") {
+        masculino = true;
+      } else {
+        masculino = false;
+      }
+
+      console.log(masculino);
+
+      //Uma outra opção é colocar a condição dentro da variável:
+      var masculino = sexo === "M";
+      console.log(masculino);
+      //A opção acima pode ocorrer porque o retorno de toda condição já retorna por si só um true ou false
+    </script>
+  </body>
+</html>

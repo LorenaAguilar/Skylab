@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <script>
+      function retornaSexo(sexo) {
+        //M ou F
+        //Função vai retornar Masculino ou Feminino de acordo com o que receber de parâmetro
+
+        //IF:
+        //Importante ressaltar que quando usamos "==" ele vai verificar somente se os valores da condição
+        //são iguais, agora, se usarmos "===" ele vai verificar se os valores da condição são iguais mas
+        //também vai verificar se o tipo dos dados comparados é igual
+        if (sexo === "M") {
+          return "Masculino";
+        } else if (sexo === "F") {
+          return "Feminino";
+        } else {
+          return "Outro";
+        }
+
+        //SWITCH:
+        switch (sexo) {
+          case "M":
+            return "Masculino";
+          case "F":
+            return "Feminino";
+          default:
+            return "Outro";
+        }
+      }
+
+      var resultado = retornaSexo("F");
+      console.log(resultado);
+    </script>
+  </body>
+</html>

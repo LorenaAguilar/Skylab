@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //Intervalo:
+      //Intervalo dentro do javaScript é uma função que executa várias vezes dentro de um intervalo
+
+      function exibeAlgo() {
+        console.log("Hello World");
+      }
+
+      //Definindo o intervalo:
+      //Primeiro parâmetro é a função que será executada,
+      // segundo parâmetro é o tempo (no exemplo = 1 segundo)
+
+      //setInterval(exibeAlgo, 1000);
+
+      //Não podemos colocar parênteses depois da função "setInterval(exibeAlgo(), 1000);" pois dessa forma
+      //a função já estará sendo executada e o intervalo não vai executar ela novamente, no caso desse
+      //seInterval, nós queremos apenas referenciar a função para que todo seu escopo seja executado
+      //várias vezes, logo, passamos a função sem os parênteses
+
+      //TimeOut:
+      //O timeout possui um conceito muito parecido com o intervalo, entretanto, no timeout, a função
+      //será executada somente uma vez, depois de um delay do tempo especificado no parâmetro
+      function exibeAlgo() {
+        console.log("Hello World");
+      }
+
+      //A função "exibeAlgo" será executada após 5 segundos
+      setTimeout(exibeAlgo, 5000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!-- Nesta parte, aprederemos como referenciar elementos do html por meio do javascript, e não
+simplesmente disparar eventos do html pro javaScript
+Ou seja, como buscar um elemento da dom, por meio do Script -->
+
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="nome" id="nome" class="nome" />
+      <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+      //Existem várias formas de referenciar um elemento dentro do script
+      //Seguem alguns exemplos:
+
+      //document => variável global que referencia a dom do meu código, ou seja
+      //referencia a árvore de elementos
+
+      //1ª forma: Busca pelo id do elemento
+      var inputElementById = document.getElementById("nome");
+      console.log("Busca pelo id do elemento: ");
+      console.log(inputElementById);
+
+      //2ª forma: Busca pela tag
+      var inputElementByTagName1 = document.getElementsByTagName("input");
+      console.log("Busca pela tag 1º caso: ");
+      console.log(inputElementByTagName1);
+      /*Não é possível garantir que exista somente um elemento com a tag específica, logo,
+      esse método sempre retorna um vetor, mesmo que só exista uma tag dessa
+      Caso eu queira somente o primeiro input:*/
+      var inputElementByTagName2 = document.getElementsByTagName("input")[0];
+      console.log("Busca pela tag 2º caso: ");
+      console.log(inputElementByTagName2);
+      //Se eu possuir dois inputs e não passar o 0, a função vai retornar todos os inputs
+
+      //3ª forma: Busca pela classe do elemento
+      var inputElementByClassName = document.getElementsByClassName("nome");
+      console.log("Busca pela classe do elemento");
+      console.log(inputElementByClassName);
+      /*Assim como na busca pela tag, sempre vai retornar um vetor, pois a classe nunca é utilizada por 
+      apenas um elemento*/
+
+      //4ª forma: Forma geral e que pode substituir muito do que foi dito anteriormente
+      //Essa forma nos permite percorrer a dom até encontrar o que estamos buscando
+      //Dessa forma, eu posso falar exatamente onde está o que estamos buscando
+      //Suponha que estamos buscando o input e queremos encontrá-lo pela tag name:
+      var inputElementQuerySelector1 = document.querySelector(
+        "body div#app input"
+      );
+
+      console.log("Busca pelo QuerySelector:");
+      console.log(inputElementQuerySelector1);
+
+      //Com o querySelector eu também posso buscar os atributos dos elementos:
+      var inputElementQuerySelector2 = document.querySelector(
+        "input[name=nome]"
+      );
+      //O colchete referencia uma propriedade do meu elemento
+      console.log("Busca pelo QuerySelector 2:");
+      console.log(inputElementQuerySelector2);
+
+      //Se eu passar somente o input
+      var inputElementQuerySelector3 = document.querySelector("input");
+      //Mesmo que eu tenha mais de um input, o querySelector sempre vai buscar o primeiro
+      //Caso eu queira que ele retorne todos os inputs eu posso utilizar o:
+      var inputElementQuerySelector4 = document.querySelectorAll("input");
+
+      //As funções de "onclick" que antes utilizávamos dentro do html podem ser referenciadas aqui dentro
+      //do script
+      var btnElement = document.querySelector("button.botao");
+
+      /*btnElement.onclick = function () {
+        alert("Botão clicado");
+      };*/
+
+      //Conseguimos incrementar ainda mais pegando o elemento do input e acionando no alert
+      var inputElement = document.querySelector("input[name=nome]");
+
+      btnElement.onclick = function () {
+        var text = inputElement.value;
+        alert(text);
+      };
+    </script>
+  </body>
+</html>
