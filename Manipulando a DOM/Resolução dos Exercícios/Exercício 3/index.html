@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <ul id="lista"></ul>
+
+    <script>
+      //Vetor dado pelo enunciado
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      //Seleciona a lista de id "lista"
+      var lista_nomes = document.querySelector("ul#lista");
+
+      //innerHTML é usado para inserir elementos na lista
+      for (var i = 0; i < nomes.length; i++) {
+        var list = document.createElement("li");
+        list.innerHTML = nomes[i];
+        lista_nomes.appendChild(list);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <input type="text" name="nome" />
+    <button onClick="adicionar()">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      var lista_nomes = document.querySelector("ul#lista");
+
+      for (var i = 0; i < nomes.length; i++) {
+        var list = document.createElement("li");
+        list.innerHTML = nomes[i];
+        lista_nomes.appendChild(list);
+      }
+
+      //Função para adicionar o conteúdo do input dentro da lista ao clicar no botão
+      function adicionar() {
+        var input_element = document.querySelector("input[name=nome]").value;
+
+        //Se o input não estiver vazio, adiciona o elemento a lista
+        if (input_element != "") {
+          list = document.createElement("li");
+          list.innerHTML = input_element;
+          lista_nomes.appendChild(list);
+
+          //Único método que encontrei de limpar o input após clicar no botão
+          document.querySelector("input[name=nome]").value = "";
+        } //Se o input estiver vazio, aparece uma mensagem na tela
+        else {
+          alert("Campo vazio");
+        }
+      }
+    </script>
+  </body>
+</html>
