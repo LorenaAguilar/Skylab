@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!--Esse cara acima impede a troca dos acentos por caracteres doidões-->
+    <body>
+      <div id="app">
+        <!-- input onde será digitado o nome do usuário do github-->
+        <input type="text" name="user" placeholder="Digite o nome de usuário" />
+        <!-- ao clicar no botão deve ser feita a requisição na api -->
+        <button onclick="receberNomeUsuario()">Adicionar</button>
+        <div>
+          <label id="texto"></label>
+        </div>
+        <ul></ul>
+      </div>
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="main.js"></script>
+    </body>
+  </head>
+</html>
