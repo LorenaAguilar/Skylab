@@ -1,3 +1,51 @@
 1. Na pasta onde vamos desenvolver o projeto:
 1.1: Abrir o terminal
 1.2: Executar o 'yarn init'
+
+----------------------------------------------------------------------------------------------------------------------
+2. Após o yarn init será criado um package.json na pasta
+Este arquivo é o responsável por armazenar as informações de dependências da nossa aplicação
+
+No exemplo do Babel, ele é uma dependência que precisa ser inserida no .json, entretanto, nós não precisaremos escrever isso na mão, podemos fazer tudo pelo terminal.
+
+Para instalar o babel (1ª dependência): yarn add @babel/cli
+
+Essa dependência vai permitir que a gente trabalhe com a interface de linha de comando do babel, que vai nos disponibilizar alguns comandos para utilizar a partir do terminal. 
+
+Para instalar o babel (2ª dependência): yarn add @babel/preset-env
+
+Essa dependência entende qual ambiente estamos trabalhando e converte para um que o navegador entenda.
+
+Instalar também o yarn add @babel/core
+------------------------------------------------------------------------------------------------------------------------
+
+Após as duas instalações anteriores, temos um arquivo "yarn.lock" que não vamos precisar mexer (nunca), uma pasta chamada "node_modules" com vários arquivos dentro que também não precisaremos mexer.
+
+------------------------------------------------------------------------------------------------------------------------
+
+É importante colocar o "node_modules/" em um arquivo .gitignore, caso estejamos fazendo algum controle de versão, pra não subir essa pasta pro git pois os arquivos lá dentro são muito pesados.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Para configurar o Babel vamos criar na raiz do projeto um .babelrc e inserir dentro dele: 
+
+{
+  "presets": ["@babel/preset-env"]
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+
+ Nosso script vai ficar no package.json
+
+-------------------------------------------------------------------------------------------------------------------------
+
+O bundle.js é o arquivo que vai rodar no navegador. 
+No nosso arquivo main.js nós vamos escrever o código como ES6, e o babel vai converter nosso código para dentro do bundle de uma forma que o navegador entenda. 
+
+-------------------------------------------------------------------------------------------------------------------------
+Para executar nosso script basta dar no terminal o "yarn dev" 
+PS: dev foi o nome que demos ao comando lá no .json
+
+
+
+O -w monitora as mudanças para passar pro bundle de forma automática.
