@@ -1,0 +1,37 @@
+ES6+: 
+
+O que é?
+
+ES é a sigla de ECMAScript, e o número que vem após a sigla é a versão,
+que é o ano em que foi lançada mais 1, por exemplo, o ES6 é o ECMAScript
+na versão de 2015, o ES7 é a versão de 2016 e assim por diante. 
+Todos os anos saem um conjunto de regras e normas que formam a 
+versão do ES.
+
+O ES é quem decide e formula as novas funcionalidades da linguagem javaScript e como esta é uma linguagem em alta e é atualizada frequentemente, a empresa responsável pelo ES lança uma versão todos os anos. 
+
+Quais as versões mais utilizadas atualmente? 
+
+A partir do ES6 o javaScript ganhou muitas funcionalidades que basicamente deram um upgrade na linguagem. Sua forma de escrever continua a mesma, mas as funcionalidades adicionadas auxiliam muito quem utiliza a linguagem. As versões ES6,ES7 e ES8 foram as que mais adicionaram funcionalidades ao javaScript e por conta disso são muito utilizadas.
+
+Babel? 
+O javaScript avança muito rápido e os navegadores não conseguem acompanhar essas mudanças, logo, alguns podem não "entender" algumas coisas do ES6 em diante. Sendo assim, o que o Babel faz é pegar o código com as funcionalidades do ES6 em diante que os navegadores poderiam não entender e vai converter em um código que todos os navegadores entendam. 
+
+O que mais?
+É importante ressaltar que as funcionalidades adicionadas nas versões a partir do ES6 não eram impossíveis de serem escritas anteriormente, mas agora possuem novas maneiras de serem escritas que podem facilitar a vida de quem as utiliza. 
+
+O que vamos aprender nessa parte do curso? 
+
+- Webpack: Servidor para conseguir atualizar o navegador automaticamente quando fizermos alguma alteração no código, além de acionar o babel para que ele converta o código automaticamente em algo que o navegador entenda. 
+
+- Classes
+
+- Arrow functions: Novo modelo de criar funções anônimas dentro do código.
+
+- Desestruturação: Forma de recuperar informações de dentro de um objeto e de um array de uma forma mais simples.
+
+-Rest/Spread: Formas de manipular os conteúdos de um array
+
+-Import/Export: Forma de importar funcionalidades de um arquivo JS para outro, sem precisar ficar declarando vários scripts dentro do arquivo html 
+
+-Async/Await: Fornece uma nova forma de trabalhar com programação assíncrona dentro do javaScript. 
