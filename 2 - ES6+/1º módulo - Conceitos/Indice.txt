@@ -1,0 +1,10 @@
+
+curso-es6: 
+introducao.js: Apenas um código de introdução para mostrar a estrutura do código Es6
+Abrange o 3º vídeo da parte de Es6: Configurando babel
+
+classes.js: Código com comentários mostrando como funcionam as classes no Es6
+Abrange o 4º vídeo da parte de Es6: Classes
+
+const_let: Código com comentários mostrando como funcionam as keywords const e let
+Abrange o 5º vídeo da parte de Es6: Const & Let
